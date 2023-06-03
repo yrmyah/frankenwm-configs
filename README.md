@@ -56,7 +56,7 @@ Le mien ressemble à ça: [config.h](config.h)
 - Très pratique: on peut paramétrer un raccourci clavier afin de lancer au démarrage de FrankenWM un *autostart* qui lancera à son tour
 diverses applications comme les barres, surveillance de courriels et autres.
 - Un exemple, dans mon cas: la combinaison MOD1(la touche Alt)+F5, lance un sous-menu (utilisant dmenu) qui permet de choisir
-un navigateur Internet parmi d'autres et de le lancer. Voici le fichier:[wwwmenu.sh](wwwmenu.sh)
+un navigateur Internet parmi d'autres et de le lancer. Voici le fichier: [wwwmenu.sh](wwwmenu.sh)
  
 <br>
 
