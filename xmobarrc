@@ -1,0 +1,47 @@
+Config { font = "xft:Monospace-9:bold"
+       , additionalFonts = []
+       , borderColor = "#f4f2c1"
+       , border = TopB
+       , bgColor = "#f4f2c1"
+       , fgColor = "#656565"
+       , alpha = 255
+       , position = Static { xpos = 5, ypos = 3, width = 1015, height = 22 }
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [ Run Network "enp2s1" ["-L","0","-H","32",
+                                          "--normal","green","--high","red"] 10
+                    , Run Wireless "wlp2s2" [ "-t", "<essid>" ] 10
+                    , Run Cpu ["-L","3","-H","50",
+                               "--normal","green","--high","red"] 10
+                   , Run DiskU [("/", "/: <used>/<size>")]
+						["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
+						20
+                    , Run Memory ["-t", "Ram: <used>/<total>"] 10
+                    , Run Date "%d/%m/%y - %H:%M" "date" 10
+                    , Run Battery        [ "--template" , "Batt: <acstatus>"
+                             , "--Low"      , "10"        -- units: %
+                             , "--High"     , "80"        -- units: %
+                             , "--low"      , "#B31717"
+                             , "--normal"   , "#FFA500"
+                             , "--high"     , "#90EE90"
+
+                             , "--" -- battery specific options
+                                       -- discharging status
+                                       , "-o"	, "<left>% (<timeleft>)"
+                                       -- AC "on" status
+                                       , "-O"	, "<fc=#a6a6a6>Charging</fc>"
+                                       -- charged status
+                                       , "-i"	, "<fc=#3FE83F>Charged</fc>"
+                             ] 50
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " | %battery% | %cpu% | <fc=#b885e1>%disku%</fc> | <fc=#aaaa00>%memory%</fc> | }{ %enp2s1% / <fc=#49A0F4>%wlp2s2wi%</fc> | "
+       }
