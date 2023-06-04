@@ -5,9 +5,12 @@ it deserves"*
 
 *Et je peux affirmer que c'est le gestionnaire de fenêtre que mon bon vieux IBM Thinkpad T42 
 méritait et celui dont il avait besoin!*
+
 <br>
 
+<img src="frankenwm.png" class="img" alt="Home">
 <img src="frankentiled.png" class="img" alt="Tiled"><br>
+<img src="frankenfloat.png" class="img" alt="Float">
 
 <br>
 
@@ -58,8 +61,7 @@ Le mien ressemble à ça: [config.h](config.h)
 - Ne choisir qu'un certain nombre de bureaux
 - À part *dmenu*, il possible de paramétrer le ou les raccourcis clavier pour d'autres lanceurs d'applications. J'utilise **rofi**
 et le lanceur de **nnn file manager**:
-```bash
-#!/bin/sh
+```
 xterm -e  ~/.config/nnn/plugins/launch
 ```
 &nbsp;&nbsp;&nbsp;&nbsp; et au passage `frankendmenu.sh`:
@@ -68,7 +70,7 @@ xterm -e  ~/.config/nnn/plugins/launch
 dmenu_run -i -fn 'Hack-11' -nb '#ddd5ff' -nf '#7F7F7F' -sb '#f4f2c1' -sf '#7F7F7F' -p 'Applications >>> '
 ```
 - Très pratique: on peut paramétrer un raccourci clavier afin de lancer au démarrage de FrankenWM un *autostart* qui lancera à son tour
-diverses applications comme les barres, surveillance de courriels et autres. Un exemple du mien `frankenstart.sh`:
+diverses applications comme les barres, surveillance de courriels et autres. Ici, un exemple, `frankenstart.sh`:
 ```bash
 #!/bin/bash
 xsetroot -cursor_name left_ptr
@@ -127,8 +129,10 @@ Voici les configs:
 
 <br>
 
-## Captures d'écran:
+---
 
-<img src="frankenfloat.png" class="img" alt="Float">
-<img src="frankenwm.png" class="img" alt="Home">
+[yrmyah.github.io](https://yrmyah.github.io)
+
+
+
 

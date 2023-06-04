@@ -67,6 +67,16 @@ static const AppRule rules[] = { \
     { "Ratmenu",   ".*",      -1,      True,  True,  0 },
     { "Launch.sh",   ".*",      -1,      True,  True,  -1 },
     { "Pcmanfm",   ".*",      1,      False,  False,  -1 },
+    { "Ristretto",   ".*",      8,      True,  False,  0 },
+    { "Gucharmap",   ".*",      -1,      True,  True,  0 },
+    { "Mousepad",   ".*",      2,      True,  False,  0 },
+    { "Bleachbit",   ".*",      6,      True,  False,  0 },
+    { "Dillo",   ".*",      4,      True,  False,  0 },
+    { "Firefox",   ".*",      4,      True,  False,  0 },
+    { "Netsurf-gtk",   ".*",      4,      True,  False,  0 },
+    { "ratmenu",   ".*",      -1,      True,  True,  0 },
+    { "9menu",   ".*",      -1,      True,  True,  0 },
+
 };
 
 /* helper for spawning shell commands, usually you don't edit this */
