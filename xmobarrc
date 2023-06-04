@@ -43,5 +43,5 @@ Config { font = "xft:Monospace-9:bold"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " | %battery% | %cpu% | <fc=#b885e1>%disku%</fc> | <fc=#aaaa00>%memory%</fc> | }{ %enp2s1% / <fc=#49A0F4>%wlp2s2wi%</fc> | "
+       , template = " %battery%   %cpu%   <fc=#b885e1>%disku%</fc>   <fc=#aaaa00>%memory%</fc>  }{ %enp2s1% / <fc=#49A0F4>%wlp2s2wi%</fc> "
        }
