@@ -71,23 +71,28 @@ dmenu_run -i -fn 'Hack-11' -nb '#ddd5ff' -nf '#7F7F7F' -sb '#f4f2c1' -sf '#7F7F7
 ```
 - Très pratique: on peut paramétrer un raccourci clavier afin de lancer au démarrage de FrankenWM un *autostart* qui lancera à son tour
 diverses applications comme les barres, surveillance de courriels et autres. Ici, un exemple, `frankenstart.sh`:
-```bash
-#!/bin/bash
-xsetroot -cursor_name left_ptr
-xsetroot -solid '#f4f2c1'
-lxpolkit &
-sct 4000 &
-dunst -conf ~/.config/dunst/dunstrc &
-(sleep 2s; diodon) &
-(sleep 3s; gnubiff -n --nogui) &
-(sleep 4s; xfce4-power-manager) &
-#(sleep 4s; nm-applet) &
-(sleep 5s; xmobar) &
-(sleep 6s; tint2) &
-(sleep 7s; conky -c ~/.config/conky/conkyt42.conf) &
-exit 0
 
-```
+<details>
+  <summary>Click to expand</summary>
+  
+    ```bash
+    #!/bin/bash
+    xsetroot -cursor_name left_ptr
+    xsetroot -solid '#f4f2c1'
+    lxpolkit &
+    sct 4000 &
+    dunst -conf ~/.config/dunst/dunstrc &
+    (sleep 2s; diodon) &
+    (sleep 3s; gnubiff -n --nogui) &
+    (sleep 4s; xfce4-power-manager) &
+    #(sleep 4s; nm-applet) &
+    (sleep 5s; xmobar) &
+    (sleep 6s; tint2) &
+    (sleep 7s; conky -c ~/.config/conky/conkyt42.conf) &
+    exit 0
+    ```
+</details>
+
 - Un exemple, dans mon cas: la combinaison MOD1(la touche Alt)+F5, lance un sous-menu (utilisant dmenu) qui permet de choisir
 un navigateur Internet parmi d'autres et de le lancer. Voici le fichier: [wwwmenu.sh](wwwmenu.sh)
 - J'ai choisi un style à la fois dépouillé et rétro, mais ça c'est une histoire de goûts et de couleurs...
